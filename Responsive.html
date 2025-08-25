@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive HTML Page</title>
+  <style>
+    /* Basic reset */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0 20px;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: #333;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: block;
+    }
+
+    nav a:hover {
+      background-color: #575757;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 20px auto;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    /* Responsive Grid for articles */
+    .articles {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    article {
+      background: #f4f4f4;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 700px) {
+      .articles {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Responsive HTML Page Example</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <main>
+    <img src="https://via.placeholder.com/900x300" alt="Example Image" />
+    <section class="articles">
+      <article>
+        <h2>Article 1</h2>
+        <p>Promoting landscape habitability and resiliency in our region and beyond.</p>
+      </article>
+      <article>
+        <h2>Article 2</h2>
+        <p></p>
+      </article>
+    </section>
+  </main>
+
+</body>
+</html>
